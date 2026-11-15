@@ -8,6 +8,7 @@ import type { AppEnv } from "./env";
 import { ApiError } from "./lib/errors";
 import { agentRoutes } from "./routes/agent";
 import { requestRoutes } from "./routes/requests";
+import { userRoutes } from "./routes/users";
 
 export { AgentRunDO };
 
@@ -39,6 +40,7 @@ app.get("/api/health", (c) => {
 app.route("/api/auth", authRoutes);
 app.route("/api/requests", requestRoutes);
 app.route("/api/requests", agentRoutes);
+app.route("/api/users", userRoutes);
 
 app.notFound((c) =>
   c.json({ error: { code: "not_found", message: "Route not found" } }, 404),

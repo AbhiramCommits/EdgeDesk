@@ -10,6 +10,7 @@ import type {
   User,
   UserRole,
 } from "shared";
+import { REQUEST_STATUSES } from "shared";
 import { newId } from "../lib/ids";
 import { isPast, nowIso } from "../lib/time";
 
@@ -210,6 +211,16 @@ export async function listUsersByRole(db: D1Database, role: UserRole): Promise<U
   return result.results.map(mapUser);
 }
 
+/** Users that may own a request: people_ops and admins. */
+export async function listAssignableUsers(db: D1Database): Promise<User[]> {
+  const result = await db
+    .prepare(
+      "SELECT id, email, name, role, created_at FROM users WHERE role IN ('people_ops', 'admin') ORDER BY name ASC",
+    )
+    .all<UserRow>();
+  return result.results.map(mapUser);
+}
+
 /* ------------------------------------------------------------------ */
 /* Requests                                                            */
 /* ------------------------------------------------------------------ */
@@ -304,8 +315,7 @@ export interface ListRequestsResult {
 export async function listRequests(
   db: D1Database,
   filters: ListRequestsFilters = {},
-): Promise<ListRequestsResult> {
-  const clauses: string[] = [];
+): Promise<ListRequestsResult> {  const clauses: string[] = [];
   const values: unknown[] = [];
 
   if (filters.status) {
@@ -362,12 +372,33 @@ export async function listRequests(
   };
 }
 
+export interface RequestStats {
+  counts: Record<RequestStatus, number>;
+  total: number;
+}
+
+export async function getRequestStats(db: D1Database): Promise<RequestStats> {
+  const rows = await db
+    .prepare("SELECT status, COUNT(*) AS n FROM requests GROUP BY status")
+    .all<{ status: string; n: number }>();
+  const counts = Object.fromEntries(
+    REQUEST_STATUSES.map((status) => [status, 0]),
+  ) as Record<RequestStatus, number>;
+  let total = 0;
+  for (const row of rows.results) {
+    if ((REQUEST_STATUSES as readonly string[]).includes(row.status)) {
+      counts[row.status as RequestStatus] = row.n;
+      total += row.n;
+    }
+  }
+  return { counts, total };
+}
+
 export async function updateRequestStatus(
   db: D1Database,
   id: string,
   status: RequestStatus,
-): Promise<Request | null> {
-  const now = nowIso();
+): Promise<Request | null> {  const now = nowIso();
   await db
     .prepare(
       `UPDATE requests

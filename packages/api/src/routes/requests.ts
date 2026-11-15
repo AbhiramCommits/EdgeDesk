@@ -15,6 +15,7 @@ import {
   createRequest,
   getLatestAgentRun,
   getRequest,
+  getRequestStats,
   getUserById,
   insertAuditEvent,
   listAgentSteps,
@@ -92,6 +93,11 @@ requestRoutes.get("/", async (c) => {
     offset: query.offset,
   });
   return c.json(result);
+});
+
+requestRoutes.get("/stats", async (c) => {
+  const stats = await getRequestStats(c.env.DB);
+  return c.json(stats);
 });
 
 requestRoutes.get("/:id", async (c) => {

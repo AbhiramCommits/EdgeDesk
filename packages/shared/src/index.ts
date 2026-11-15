@@ -233,6 +233,17 @@ export const requestDetailResponseSchema = z.object({
 });
 export type RequestDetailResponse = z.infer<typeof requestDetailResponseSchema>;
 
+export const requestStatsResponseSchema = z.object({
+  counts: z.record(requestStatusSchema, z.number().int().nonnegative()),
+  total: z.number().int().nonnegative(),
+});
+export type RequestStatsResponse = z.infer<typeof requestStatsResponseSchema>;
+
+export const usersResponseSchema = z.object({
+  users: z.array(userSchema),
+});
+export type UsersResponse = z.infer<typeof usersResponseSchema>;
+
 export const createRequestResponseSchema = z.object({
   request: requestSchema,
   runId: z.string().min(1),

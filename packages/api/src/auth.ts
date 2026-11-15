@@ -3,7 +3,7 @@ import { deleteCookie, getCookie, setCookie } from "hono/cookie";
 import { createMiddleware } from "hono/factory";
 import { loginRequestSchema, userRoleSchema, type UserRole } from "shared";
 import { z } from "zod";
-import { getUserByEmail } from "./db/repo";
+import { getUserByEmail, getUserById } from "./db/repo";
 import type { AppEnv, AuthUser } from "./env";
 import { ApiError } from "./lib/errors";
 import { readJson } from "./lib/http";
@@ -100,3 +100,10 @@ export function requireRole(...roles: UserRole[]) {
     await next();
   });
 }
+
+authRoutes.get("/me", requireAuth, async (c) => {
+  const session = c.get("user");
+  const user = await getUserById(c.env.DB, session.userId);
+  if (!user) throw ApiError.unauthorized("Session user no longer exists");
+  return c.json({ user });
+});

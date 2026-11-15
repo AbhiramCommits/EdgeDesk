@@ -1,34 +1,36 @@
-import { useEffect, useState } from "react";
-import type { HealthResponse } from "shared";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { AuthProvider, RequireAuth } from "./auth/AuthContext";
+import { Layout } from "./components/Layout";
+import { ToastProvider } from "./components/ui/Toast";
+import { LoginPage } from "./pages/LoginPage";
+import { NewRequestPage } from "./pages/NewRequestPage";
+import { QueuePage } from "./pages/QueuePage";
+import { RequestDetailPage } from "./pages/RequestDetailPage";
 
+/**
+ * Pages routing split (documented in public/_redirects):
+ *   Browser -> Pages static bundle (this SPA) for every non-/api path
+ *   Browser -> Worker for /api/*, proxied by Pages in production and by Vite
+ *   in local dev/preview. Session cookies therefore stay same-site.
+ */
 export default function App() {
-  const [health, setHealth] = useState<HealthResponse | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    fetch("/api/health", { credentials: "include" })
-      .then(async (res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return (await res.json()) as HealthResponse;
-      })
-      .then((data) => {
-        if (!cancelled) setHealth(data);
-      })
-      .catch((err: unknown) => {
-        if (!cancelled) setError(err instanceof Error ? err.message : String(err));
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
   return (
-    <main style={{ padding: "2rem", maxWidth: 720 }}>
-      <h1>EdgeDesk</h1>
-      <p>People-Ops request desk running on Cloudflare&rsquo;s edge.</p>
-      {error ? <p role="alert">Worker health check failed: {error}</p> : null}
-      {health ? <pre data-testid="health-json">{JSON.stringify(health, null, 2)}</pre> : <p>Checking worker…</p>}
-    </main>
+    <BrowserRouter>
+      <AuthProvider>
+        <ToastProvider>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route element={<RequireAuth />}>
+              <Route element={<Layout />}>
+                <Route index element={<QueuePage />} />
+                <Route path="new" element={<NewRequestPage />} />
+                <Route path="requests/:id" element={<RequestDetailPage />} />
+              </Route>
+            </Route>
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </ToastProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
