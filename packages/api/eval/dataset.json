@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "ev_001",
+    "title": "Laptop stolen from hotel",
+    "body": "My work laptop was stolen while I was travelling. I need a replacement today and the old device wiped remotely.",
+    "label_category": "equipment",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_002",
+    "title": "Laptop will not boot before a customer demo",
+    "body": "My laptop will not boot and I have a customer demo this week. I need a replacement laptop before the meeting.",
+    "label_category": "equipment",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_003",
+    "title": "Second monitor for pair programming",
+    "body": "I am pairing most afternoons and would like a 27 inch monitor for my desk.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_004",
+    "title": "Standing desk converter request",
+    "body": "Requesting a sit-stand desk converter. No urgency, whenever the next batch arrives.",
+    "label_category": "equipment",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_005",
+    "title": "Headset microphone broken",
+    "body": "My headset mic stopped working and I cannot work on customer calls. I need a replacement this week.",
+    "label_category": "equipment",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_006",
+    "title": "Docking station compatibility",
+    "body": "My new MacBook does not charge with my old dock. Which docking station should I order?",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_007",
+    "title": "Keyboard died before release",
+    "body": "My keyboard is dead and the release is blocked because I cannot deploy. This is urgent.",
+    "label_category": "equipment",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_008",
+    "title": "Ergonomic mouse request",
+    "body": "No rush, my wrist is a little sore and I would like a vertical mouse.",
+    "label_category": "equipment",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_009",
+    "title": "Webcam for customer calls",
+    "body": "The built-in camera on my monitor is poor quality. Requesting an external webcam.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_010",
+    "title": "Charger frayed before travel",
+    "body": "My charger is frayed and I travel to a customer site this week. Need a replacement charger.",
+    "label_category": "equipment",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_011",
+    "title": "Desk chair replacement",
+    "body": "My office chair has a broken gas lift. Please replace the chair.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_012",
+    "title": "Printer not connecting",
+    "body": "The printer on the third floor will not connect to my laptop over wifi.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_013",
+    "title": "Monitor stolen from desk",
+    "body": "My second monitor was stolen from my desk overnight. I need a replacement monitor today.",
+    "label_category": "equipment",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_014",
+    "title": "Spare laptop charger",
+    "body": "Requesting a spare charger to keep in my bag. Not urgent, whenever it is convenient.",
+    "label_category": "equipment",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_015",
+    "title": "Laptop battery swelling",
+    "body": "The laptop battery is swelling and I cannot work safely. I need a replacement soon.",
+    "label_category": "equipment",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_016",
+    "title": "USB-C dock request",
+    "body": "I need a USB-C dock for my home desk so I can connect a monitor and keyboard.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_017",
+    "title": "Replacement keyboard",
+    "body": "Several keys on my keyboard are unresponsive. Please send a replacement keyboard.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_018",
+    "title": "Large monitor for home office",
+    "body": "A larger monitor would be nice to have for reading dashboards. No urgency.",
+    "label_category": "equipment",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_019",
+    "title": "Headset for open office",
+    "body": "The noise in the open office is blocking my work this week. I need a noise cancelling headset.",
+    "label_category": "equipment",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_020",
+    "title": "Webcam privacy shutter",
+    "body": "I would like a webcam with a privacy shutter for my desktop setup.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_021",
+    "title": "Loaner laptop while mine is repaired",
+    "body": "My laptop is in repair and I need a loaner machine for the next two weeks.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_022",
+    "title": "Mouse pad and wrist rest",
+    "body": "Requesting a mouse pad and wrist rest. This is low priority and can wait.",
+    "label_category": "equipment",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_023",
+    "title": "Work phone stolen",
+    "body": "My work phone was stolen on the train. Please issue a replacement today and disable the old device.",
+    "label_category": "equipment",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_024",
+    "title": "Docking station for two monitors",
+    "body": "I need a dock that supports two external monitors for my new laptop.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_025",
+    "title": "Laptop fan failing and overheating",
+    "body": "The laptop fan is failing and the machine overheats. I need a repair or replacement this week.",
+    "label_category": "equipment",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_026",
+    "title": "Replacement charger",
+    "body": "My charger stopped working yesterday. Please send a replacement.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_027",
+    "title": "Second desk lamp",
+    "body": "A second desk lamp would help with my home office. No rush.",
+    "label_category": "equipment",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_028",
+    "title": "Monitor arm for standing desk",
+    "body": "Requesting a monitor arm that clamps to my standing desk.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_029",
+    "title": "Keyboard replacement before audit",
+    "body": "My keyboard is unreliable and I need a replacement this week before the audit.",
+    "label_category": "equipment",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_030",
+    "title": "Noise cancelling headphones",
+    "body": "Requesting noise cancelling headphones for focused work in the office.",
+    "label_category": "equipment",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_031",
+    "title": "Spare monitor for occasional use",
+    "body": "A spare monitor for occasional testing would be nice to have. Not urgent.",
+    "label_category": "equipment",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_032",
+    "title": "Laptop stolen from car",
+    "body": "My laptop was stolen from my car last night. I need a replacement immediately and a police report reference.",
+    "label_category": "equipment",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_033",
+    "title": "New engineer starts Monday",
+    "body": "Our new hire starts this week and needs a laptop, accounts, and a buddy before day one.",
+    "label_category": "onboarding",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_034",
+    "title": "New hire arrived with no laptop",
+    "body": "The new hire arrived this morning with no laptop. Day one training is blocked.",
+    "label_category": "onboarding",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_035",
+    "title": "Onboarding buddy assignment",
+    "body": "Please assign an onboarding buddy for the new designer joining next month.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_036",
+    "title": "Orientation recording",
+    "body": "Could the orientation recording be added to the onboarding hub? No urgency.",
+    "label_category": "onboarding",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_037",
+    "title": "Welcome kit shipping to Berlin",
+    "body": "Please ship the welcome kit and swag to our Berlin hire before the start date.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_038",
+    "title": "Contractor onboarding paperwork",
+    "body": "A contractor starts this week and still needs the NDA and equipment agreement processed.",
+    "label_category": "onboarding",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_039",
+    "title": "First week checklist access",
+    "body": "I cannot open the first week checklist and onboarding starts soon. Please grant access.",
+    "label_category": "onboarding",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_040",
+    "title": "Team intro calendar for new hire",
+    "body": "Please add our new hire to the team intro calendar and buddy rotation.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_041",
+    "title": "Intern dev environment",
+    "body": "An intern joins next month and needs GitHub, VPN, and the standard dev environment.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_042",
+    "title": "Swag size exchange",
+    "body": "The hoodie in the welcome kit is the wrong size. Can it be exchanged whenever?",
+    "label_category": "onboarding",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_043",
+    "title": "New designer onboarding schedule",
+    "body": "Please prepare the first week schedule and orientation for our new designer.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_044",
+    "title": "Onboarding session missing from calendar",
+    "body": "The new hire's first day is this week and the orientation session is missing from the calendar.",
+    "label_category": "onboarding",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_045",
+    "title": "Welcome kit for remote hire",
+    "body": "Please send a welcome kit to the remote hire joining the support team.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_046",
+    "title": "New sales hire accounts",
+    "body": "The new sales hire needs accounts and a laptop image before the start date.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_047",
+    "title": "New hire has no equipment on day one",
+    "body": "The new hire arrived today without a laptop and first day training is blocked.",
+    "label_category": "onboarding",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_048",
+    "title": "Onboarding checklist template update",
+    "body": "Please update the onboarding checklist template to include security training.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_049",
+    "title": "Buddy program feedback",
+    "body": "I have a question about the buddy program. This is not urgent.",
+    "label_category": "onboarding",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_050",
+    "title": "Contractor extension onboarding",
+    "body": "A contractor is extending and needs the onboarding paperwork refreshed.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_051",
+    "title": "New hire start date moved",
+    "body": "The new hire start date moved to this week and accounts are needed soon.",
+    "label_category": "onboarding",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_052",
+    "title": "Welcome lunch scheduling",
+    "body": "Please schedule the welcome lunch for the new hire's first week.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_053",
+    "title": "Onboarding hub link",
+    "body": "Where can I find the onboarding hub link? No rush, just curious.",
+    "label_category": "onboarding",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_054",
+    "title": "New hire laptop image",
+    "body": "Please image a laptop for the new hire joining on the 12th.",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_055",
+    "title": "Remote work policy for Portugal",
+    "body": "I am relocating to Portugal for three months. What does the remote work policy allow internationally?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_056",
+    "title": "Parental leave policy question",
+    "body": "I am curious about the parental leave policy. No urgency, just planning ahead.",
+    "label_category": "policy",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_057",
+    "title": "Expense policy for client dinners",
+    "body": "What is the expense policy limit for client dinners while travelling?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_058",
+    "title": "Travel policy exception for medical need",
+    "body": "I need a travel policy exception for a medical need and must book this week.",
+    "label_category": "policy",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_059",
+    "title": "Sick leave documentation",
+    "body": "Do I need a doctor's note for a three day sick leave under the current policy?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_060",
+    "title": "Holiday calendar next year",
+    "body": "Please share next year's holiday calendar. No rush.",
+    "label_category": "policy",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_061",
+    "title": "Code of conduct training deadline",
+    "body": "When is the mandatory code of conduct training due for contractors?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_062",
+    "title": "Bereavement leave entitlement",
+    "body": "A family member passed away. What bereavement leave am I entitled to and how do I arrange it this week?",
+    "label_category": "policy",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_063",
+    "title": "Equipment return policy",
+    "body": "What is the policy for returning equipment when someone leaves the company?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_064",
+    "title": "Pet policy question",
+    "body": "I am curious whether the office has a pet policy. No urgency.",
+    "label_category": "policy",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_065",
+    "title": "PTO carryover policy",
+    "body": "How many PTO days can I carry over under the vacation policy?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_066",
+    "title": "Remote work stipend policy",
+    "body": "Is there a remote work stipend policy for home internet?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_067",
+    "title": "Parental leave start date",
+    "body": "I need to submit my parental leave start date this week. What is the process?",
+    "label_category": "policy",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_068",
+    "title": "Travel insurance policy",
+    "body": "Does our travel policy include travel insurance for international trips?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_069",
+    "title": "Handbook section on gifts",
+    "body": "Where is the handbook section on accepting gifts? Just curious.",
+    "label_category": "policy",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_070",
+    "title": "Dress code policy",
+    "body": "What is the dress code policy for customer visits?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_071",
+    "title": "Accommodation request process",
+    "body": "I need a medical accommodation and must start the process this week.",
+    "label_category": "policy",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_072",
+    "title": "Sabbatical policy",
+    "body": "Does the company offer sabbatical leave, and what is the policy?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_073",
+    "title": "Learning stipend question",
+    "body": "I have a question about the learning stipend. No rush.",
+    "label_category": "policy",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_074",
+    "title": "International travel approval",
+    "body": "What approval is needed for international travel under the travel policy?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_075",
+    "title": "Sick leave extension",
+    "body": "My sick leave needs an extension this week. What documentation does the policy require?",
+    "label_category": "policy",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_076",
+    "title": "Expense receipt policy",
+    "body": "Are digital receipts acceptable under the expense policy?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_077",
+    "title": "Office guest policy",
+    "body": "What is the policy for bringing a guest to the office? Not urgent.",
+    "label_category": "policy",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_078",
+    "title": "Notice period policy",
+    "body": "What is the notice period policy for resignations?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_079",
+    "title": "Bereavement travel booking",
+    "body": "I need to book bereavement travel this week. What does the travel policy cover?",
+    "label_category": "policy",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_080",
+    "title": "Remote work equipment policy",
+    "body": "What equipment can I claim under the remote work policy?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_081",
+    "title": "Holiday party policy",
+    "body": "Is there a policy about holiday party expenses? No urgency.",
+    "label_category": "policy",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_082",
+    "title": "Parental leave return to work",
+    "body": "What is the policy for returning to work after parental leave?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_083",
+    "title": "Medical leave documentation",
+    "body": "I need to submit medical leave documentation this week. What does the policy require?",
+    "label_category": "policy",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_084",
+    "title": "Training reimbursement policy",
+    "body": "Does the training reimbursement policy cover conferences?",
+    "label_category": "policy",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_085",
+    "title": "Locked out of SSO",
+    "body": "I am locked out of SSO and have a customer demo in one hour. I cannot log in.",
+    "label_category": "access",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_086",
+    "title": "GitHub repo access",
+    "body": "Please grant me write access to the analytics repository. I need it this week.",
+    "label_category": "access",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_087",
+    "title": "VPN access for contractor",
+    "body": "A contractor needs VPN access to staging for the next six weeks.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_088",
+    "title": "Production deploy permission blocked",
+    "body": "The release is blocked because I do not have deploy permission for production.",
+    "label_category": "access",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_089",
+    "title": "Jira permissions",
+    "body": "I cannot edit tickets in the hiring project. Please fix my Jira permissions this week.",
+    "label_category": "access",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_090",
+    "title": "Shared mailbox access",
+    "body": "Please add me to the people-ops shared mailbox so I can answer candidates.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_091",
+    "title": "Password reset email not arriving",
+    "body": "The password reset email never arrives and I am unable to log in. Please help soon.",
+    "label_category": "access",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_092",
+    "title": "Admin rights staging",
+    "body": "I need temporary admin rights on the staging database for a migration.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_093",
+    "title": "Read only finance dashboard",
+    "body": "Requesting read only access to the finance dashboard. No urgency.",
+    "label_category": "access",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_094",
+    "title": "Provision an account for our contractor",
+    "body": "Please provision an account for our contractor so they can access the wiki.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_095",
+    "title": "MFA device lost",
+    "body": "I lost my MFA device and cannot log in. I need a reset before my demo today.",
+    "label_category": "access",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_096",
+    "title": "Repo access for analytics",
+    "body": "Please add me to the analytics repository in GitHub.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_097",
+    "title": "Badge reader question",
+    "body": "I have a question about the new badge reader. Not urgent.",
+    "label_category": "access",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_098",
+    "title": "SSO group membership",
+    "body": "I need to be added to the engineering SSO group this week.",
+    "label_category": "access",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_099",
+    "title": "Deploy role for CI",
+    "body": "Please grant the CI service account a deploy role for the staging project.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_100",
+    "title": "Locked out during incident",
+    "body": "I am locked out of the admin console during a production incident. Urgent.",
+    "label_category": "access",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_101",
+    "title": "Contractor VPN renewal",
+    "body": "Our contractor's VPN access expires Friday. Please renew it.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_102",
+    "title": "Password expired before customer call",
+    "body": "My password expired and I cannot log in before a customer call this week.",
+    "label_category": "access",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_103",
+    "title": "Jira admin access",
+    "body": "Requesting Jira admin access for the new project space.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_104",
+    "title": "GitHub read access for docs",
+    "body": "I would like read access to the docs repository. No rush.",
+    "label_category": "access",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_105",
+    "title": "Shared drive permissions",
+    "body": "I need permissions on the shared drive for the planning folder this week.",
+    "label_category": "access",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_106",
+    "title": "Okta group request",
+    "body": "Please add me to the Okta group for the data platform team.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_107",
+    "title": "Database read replica access",
+    "body": "I need read access to the analytics database replica.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_108",
+    "title": "Access review question",
+    "body": "I have a question about the quarterly access review. Not urgent.",
+    "label_category": "access",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_109",
+    "title": "Deploy permission blocking my work",
+    "body": "Lack of deploy permission is blocking my work this week. Please grant access.",
+    "label_category": "access",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_110",
+    "title": "SSO locked out on first day",
+    "body": "I am locked out of SSO during onboarding and have a demo in one hour.",
+    "label_category": "access",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_111",
+    "title": "VPN split tunnel",
+    "body": "Please enable split tunnel for my VPN profile so I can reach staging.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_112",
+    "title": "MFA reset before travel",
+    "body": "I need an MFA reset before I travel this week and lose my phone.",
+    "label_category": "access",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_113",
+    "title": "Mailbox delegation",
+    "body": "Please delegate the recruiting mailbox to my account.",
+    "label_category": "access",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_114",
+    "title": "Access to old wiki",
+    "body": "I need access to the old wiki for historical notes. Not urgent.",
+    "label_category": "access",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_115",
+    "title": "Salary not paid",
+    "body": "My salary did not arrive today and rent is due. Please check the payroll run urgently.",
+    "label_category": "payroll",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_116",
+    "title": "Missing overtime",
+    "body": "My payslip is missing approved overtime. Please correct it this week.",
+    "label_category": "payroll",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_117",
+    "title": "Direct deposit change",
+    "body": "I need to update my direct deposit account for next month's salary.",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_118",
+    "title": "W-4 withholding update",
+    "body": "Please send instructions for updating my W-4 withholding in the payroll portal.",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_119",
+    "title": "Bonus calculation wrong",
+    "body": "My quarterly bonus is lower than the plan. I need an explanation this week.",
+    "label_category": "payroll",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_120",
+    "title": "Payslip PDF download",
+    "body": "How do I download older payslip PDFs? No rush, just a question.",
+    "label_category": "payroll",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_121",
+    "title": "401k contribution change",
+    "body": "I want to raise my 401k contribution from 5 to 8 percent next quarter.",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_122",
+    "title": "Expense report stuck",
+    "body": "My travel expense report has been pending for two weeks. Please help.",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_123",
+    "title": "Travel reimbursement late",
+    "body": "My travel reimbursement is late and I need it paid this week.",
+    "label_category": "payroll",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_124",
+    "title": "Payroll calendar question",
+    "body": "Where is the payroll calendar? Just curious, no urgency.",
+    "label_category": "payroll",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_125",
+    "title": "Payroll correction missed run",
+    "body": "My salary was not paid correctly and the payroll run closes today.",
+    "label_category": "payroll",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_126",
+    "title": "Tax form update",
+    "body": "I need to update my state tax form in the payroll portal.",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_127",
+    "title": "Home internet stipend",
+    "body": "How do I claim the monthly home internet stipend?",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_128",
+    "title": "Payslip missing overtime again",
+    "body": "Overtime is missing from my payslip again and I need a correction this week.",
+    "label_category": "payroll",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_129",
+    "title": "Equity statement",
+    "body": "Please explain the equity statement in my benefits portal.",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_130",
+    "title": "Benefits enrollment question",
+    "body": "I have a question about benefits enrollment. No rush.",
+    "label_category": "payroll",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_131",
+    "title": "Direct deposit not showing",
+    "body": "My direct deposit is not showing in the payroll portal and payday is this week.",
+    "label_category": "payroll",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_132",
+    "title": "Bonus plan document",
+    "body": "Please send the current bonus plan document.",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_133",
+    "title": "Payroll system down",
+    "body": "The payroll system has an outage and salaries are due today. Urgent.",
+    "label_category": "payroll",
+    "label_priority": "p0"
+  },
+  {
+    "id": "ev_134",
+    "title": "Reimbursement receipt",
+    "body": "I need to submit a reimbursement receipt for a client lunch.",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_135",
+    "title": "401k match",
+    "body": "How does the 401k match work under our benefits plan?",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_136",
+    "title": "Final paycheck for contractor",
+    "body": "Our contractor's final paycheck is due this week. Please confirm payroll.",
+    "label_category": "payroll",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_137",
+    "title": "Pay date calendar",
+    "body": "When is the next pay date? No hurry.",
+    "label_category": "payroll",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_138",
+    "title": "State tax withholding",
+    "body": "Please update my state tax withholding for the new address.",
+    "label_category": "payroll",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_139",
+    "title": "Not sure who owns this request",
+    "body": "I have a question that does not fit the usual categories. Who should I talk to about workplace planning?",
+    "label_category": "other",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_140",
+    "title": "Office plant watering",
+    "body": "The plants near the kitchen look dry. Is there a facilities rota? No urgency.",
+    "label_category": "other",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_141",
+    "title": "Conference ticket purchase",
+    "body": "I bought a conference ticket with my personal card. Which team handles the purchase?",
+    "label_category": "other",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_142",
+    "title": "Desk move coordination",
+    "body": "Our team is reorganising seats this week and needs help moving monitors and docks.",
+    "label_category": "other",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_143",
+    "title": "Org chart update owner unclear",
+    "body": "I need an org chart update but I am not sure who owns that request.",
+    "label_category": "other",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_144",
+    "title": "Lost badge replacement",
+    "body": "I lost my building badge but I work remotely this week. Not urgent.",
+    "label_category": "access",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_145",
+    "title": "Team offsite planning",
+    "body": "We are planning a team offsite and need help with the venue contract and budget.",
+    "label_category": "other",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_146",
+    "title": "Recognition award nomination",
+    "body": "How do I nominate a teammate for the quarterly recognition award?",
+    "label_category": "other",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_147",
+    "title": "Workplace accommodation assessment",
+    "body": "I need an ergonomic assessment this week for a quiet workspace accommodation.",
+    "label_category": "other",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_148",
+    "title": "Personal mail delivery",
+    "body": "Can personal mail be delivered to the office? No rush.",
+    "label_category": "other",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_149",
+    "title": "Quiet workspace request",
+    "body": "I need a quieter workspace for focused work. Who should I ask?",
+    "label_category": "other",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_150",
+    "title": "Ergonomic assessment",
+    "body": "I need an ergonomic assessment for my desk this week.",
+    "label_category": "other",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_151",
+    "title": "Onboarding swag size",
+    "body": "The hoodie in my welcome kit is the wrong size. Can it be exchanged?",
+    "label_category": "onboarding",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_152",
+    "title": "General question about workplace",
+    "body": "I have a general question about workplace facilities. No urgency.",
+    "label_category": "other",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_153",
+    "title": "Team event budget approval",
+    "body": "We need budget approval for a team event this week.",
+    "label_category": "other",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_154",
+    "title": "Lost and found",
+    "body": "I left a jacket in the office. Is there a lost and found?",
+    "label_category": "other",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_155",
+    "title": "Parking spot request",
+    "body": "Can I get a parking spot at the office garage for next month?",
+    "label_category": "other",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_156",
+    "title": "Office temperature",
+    "body": "My area of the office is too cold. Not urgent, just a facilities question.",
+    "label_category": "other",
+    "label_priority": "p3"
+  },
+  {
+    "id": "ev_157",
+    "title": "Guest visit coordination",
+    "body": "We have a guest visiting this week and need a badge and meeting room.",
+    "label_category": "other",
+    "label_priority": "p1"
+  },
+  {
+    "id": "ev_158",
+    "title": "Company store order",
+    "body": "How do I order a company hoodie from the store?",
+    "label_category": "other",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_159",
+    "title": "Volunteer day planning",
+    "body": "I am helping plan the volunteer day and need a point of contact.",
+    "label_category": "other",
+    "label_priority": "p2"
+  },
+  {
+    "id": "ev_160",
+    "title": "Emergency evacuation drill coordination",
+    "body": "Our office needs an urgent evacuation drill today. Who coordinates facilities?",
+    "label_category": "other",
+    "label_priority": "p0"
+  }
+]

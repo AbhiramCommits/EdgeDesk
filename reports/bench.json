@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-15T05:22:47.498Z",
+    "node": "v26.13.0",
+    "runtime": "wrangler unstable_dev / Miniflare (local, no Cloudflare account)",
+    "n": 500,
+    "concurrency": 10,
+    "seededRequests": 60,
+    "requestsCreated": 500,
+    "createdRuns": 500,
+    "pendingRunsAfterWait": 0,
+    "workerBundle": {
+      "rawKiB": 291.06,
+      "gzipKiB": 59.31
+    }
+  },
+  "endpoints": [
+    {
+      "name": "health",
+      "method": "GET",
+      "path": "/api/health",
+      "n": 500,
+      "concurrency": 10,
+      "p50": 9.56,
+      "p95": 34.46,
+      "p99": 137.81,
+      "max": 155.56,
+      "min": 2.72,
+      "mean": 15.12,
+      "throughputReqPerSec": 655.55,
+      "totalMs": 762.72
+    },
+    {
+      "name": "create_request",
+      "method": "POST",
+      "path": "/api/requests",
+      "n": 500,
+      "concurrency": 10,
+      "p50": 416.88,
+      "p95": 904.25,
+      "p99": 963.67,
+      "max": 976.49,
+      "min": 31.62,
+      "mean": 464.53,
+      "throughputReqPerSec": 21.43,
+      "totalMs": 23333.61
+    },
+    {
+      "name": "list_requests",
+      "method": "GET",
+      "path": "/api/requests",
+      "n": 500,
+      "concurrency": 10,
+      "p50": 41.23,
+      "p95": 112.43,
+      "p99": 295.34,
+      "max": 317.96,
+      "min": 7.42,
+      "mean": 53.49,
+      "throughputReqPerSec": 185.68,
+      "totalMs": 2692.87
+    },
+    {
+      "name": "get_request",
+      "method": "GET",
+      "path": "/api/requests/:id",
+      "n": 500,
+      "concurrency": 10,
+      "p50": 60.07,
+      "p95": 129.66,
+      "p99": 203.47,
+      "max": 234.74,
+      "min": 9.35,
+      "mean": 69.39,
+      "throughputReqPerSec": 139.77,
+      "totalMs": 3577.25
+    }
+  ],
+  "agentRuns": {
+    "totalRows": 500,
+    "statusCounts": {
+      "finished": 500
+    },
+    "finishedWithDuration": 500,
+    "p50": 222,
+    "p95": 411,
+    "p99": 538,
+    "max": 538,
+    "min": 25,
+    "mean": 240.07
+  }
+}

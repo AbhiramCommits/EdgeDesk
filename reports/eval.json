@@ -1,0 +1,287 @@
+{
+  "dataset": {
+    "path": "packages/api/eval/dataset.json",
+    "size": 160,
+    "categoryDistribution": {
+      "equipment": 32,
+      "onboarding": 23,
+      "policy": 30,
+      "access": 31,
+      "payroll": 24,
+      "other": 20
+    },
+    "priorityDistribution": [
+      {
+        "priority": "p0",
+        "count": 16
+      },
+      {
+        "priority": "p1",
+        "count": 38
+      },
+      {
+        "priority": "p2",
+        "count": 74
+      },
+      {
+        "priority": "p3",
+        "count": 32
+      }
+    ]
+  },
+  "summary": {
+    "categoryAccuracy": 0.9875,
+    "correctCategories": 158,
+    "macroF1": 0.986,
+    "priorityAccuracy": 0.95,
+    "correctPriorities": 152,
+    "meanConfidenceCorrect": 0.9253,
+    "meanConfidenceIncorrect": 0.815,
+    "confidenceGap": 0.1103
+  },
+  "perCategory": [
+    {
+      "category": "equipment",
+      "support": 32,
+      "precision": 0.9697,
+      "recall": 1,
+      "f1": 0.9846,
+      "tp": 32,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "category": "onboarding",
+      "support": 23,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 23,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "category": "policy",
+      "support": 30,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 30,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "category": "access",
+      "support": 31,
+      "precision": 0.9688,
+      "recall": 1,
+      "f1": 0.9841,
+      "tp": 31,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "category": "payroll",
+      "support": 24,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 24,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "category": "other",
+      "support": 20,
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.9474,
+      "tp": 18,
+      "fp": 0,
+      "fn": 2
+    }
+  ],
+  "confusionMatrix": {
+    "labels": [
+      "equipment",
+      "onboarding",
+      "policy",
+      "access",
+      "payroll",
+      "other"
+    ],
+    "matrix": [
+      [
+        32,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        23,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        31,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        24,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        18
+      ]
+    ],
+    "byLabel": {
+      "equipment": {
+        "equipment": 32,
+        "onboarding": 0,
+        "policy": 0,
+        "access": 0,
+        "payroll": 0,
+        "other": 0
+      },
+      "onboarding": {
+        "equipment": 0,
+        "onboarding": 23,
+        "policy": 0,
+        "access": 0,
+        "payroll": 0,
+        "other": 0
+      },
+      "policy": {
+        "equipment": 0,
+        "onboarding": 0,
+        "policy": 30,
+        "access": 0,
+        "payroll": 0,
+        "other": 0
+      },
+      "access": {
+        "equipment": 0,
+        "onboarding": 0,
+        "policy": 0,
+        "access": 31,
+        "payroll": 0,
+        "other": 0
+      },
+      "payroll": {
+        "equipment": 0,
+        "onboarding": 0,
+        "policy": 0,
+        "access": 0,
+        "payroll": 24,
+        "other": 0
+      },
+      "other": {
+        "equipment": 1,
+        "onboarding": 0,
+        "policy": 0,
+        "access": 1,
+        "payroll": 0,
+        "other": 18
+      }
+    }
+  },
+  "worstMisclassifications": [
+    {
+      "id": "ev_157",
+      "title": "Guest visit coordination",
+      "text": "Guest visit coordination — We have a guest visiting this week and need a badge and meeting room.",
+      "labelCategory": "other",
+      "predictedCategory": "access",
+      "confidence": 0.9
+    },
+    {
+      "id": "ev_142",
+      "title": "Desk move coordination",
+      "text": "Desk move coordination — Our team is reorganising seats this week and needs help moving monitors and docks.",
+      "labelCategory": "other",
+      "predictedCategory": "equipment",
+      "confidence": 0.73
+    }
+  ],
+  "rules": {
+    "categoryRules": [
+      {
+        "category": "equipment",
+        "terms": 28
+      },
+      {
+        "category": "onboarding",
+        "terms": 24
+      },
+      {
+        "category": "policy",
+        "terms": 30
+      },
+      {
+        "category": "access",
+        "terms": 29
+      },
+      {
+        "category": "payroll",
+        "terms": 26
+      },
+      {
+        "category": "other",
+        "terms": 24
+      }
+    ],
+    "priorityRules": [
+      {
+        "priority": "p0",
+        "terms": 20
+      },
+      {
+        "priority": "p1",
+        "terms": 14
+      },
+      {
+        "priority": "p3",
+        "terms": 12
+      }
+    ],
+    "thresholds": {
+      "minimumCategoryScore": 3.5,
+      "ambiguousMargin": 1,
+      "confidentScore": 6
+    },
+    "tieBreakOrder": [
+      "equipment",
+      "onboarding",
+      "access",
+      "payroll",
+      "policy",
+      "other"
+    ]
+  }
+}

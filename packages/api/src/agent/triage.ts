@@ -88,6 +88,8 @@ export const TRIAGE_RULES = {
         { term: "keyboard*", weight: 4 },
         { term: "mouse", weight: 4 },
         { term: "headset*", weight: 4 },
+        { term: "headphones", weight: 5 },
+        { term: "noise cancelling", weight: 5 },
         { term: "dock*", weight: 3 },
         { term: "docking station", weight: 6 },
         { term: "charger*", weight: 4 },
@@ -120,7 +122,10 @@ export const TRIAGE_RULES = {
         { term: "buddy", weight: 3 },
         { term: "start date", weight: 4 },
         { term: "welcome kit", weight: 5 },
-        { term: "intern*", weight: 4 },
+        { term: "intern", weight: 4 },
+        { term: "internship", weight: 4 },
+        { term: "dev environment", weight: 6 },
+        { term: "onboarding hub", weight: 5 },
         { term: "new engineer", weight: 4 },
         { term: "new designer", weight: 4 },
         { term: "new sales", weight: 3 },
@@ -157,6 +162,7 @@ export const TRIAGE_RULES = {
         { term: "reimbursement", weight: 3 },
         { term: "code of conduct", weight: 6 },
         { term: "training", weight: 2 },
+        { term: "learning stipend", weight: 6 },
         { term: "holiday", weight: 4 },
         { term: "allowed", weight: 2 },
         { term: "entitled", weight: 3 },
@@ -177,6 +183,7 @@ export const TRIAGE_RULES = {
         { term: "log in", weight: 4 },
         { term: "locked out", weight: 6 },
         { term: "sso", weight: 6 },
+        { term: "okta", weight: 5 },
         { term: "vpn", weight: 5 },
         { term: "password", weight: 5 },
         { term: "reset", weight: 2 },
@@ -192,7 +199,12 @@ export const TRIAGE_RULES = {
         { term: "deploy permission", weight: 6 },
         { term: "credentials", weight: 3 },
         { term: "shared mailbox", weight: 5 },
-        { term: "badge", weight: 3 },
+        { term: "badge", weight: 4 },
+        { term: "building badge", weight: 5 },
+        { term: "deploy role", weight: 5 },
+        { term: "mailbox", weight: 3 },
+        { term: "delegation", weight: 2 },
+        { term: "service account", weight: 3 },
         { term: "read only", weight: 3 },
       ],
     },
@@ -215,6 +227,7 @@ export const TRIAGE_RULES = {
         { term: "overtime", weight: 5 },
         { term: "paycheck", weight: 5 },
         { term: "payday", weight: 5 },
+        { term: "pay date", weight: 5 },
         { term: "equity", weight: 3 },
         { term: "stock options", weight: 3 },
         { term: "invoice", weight: 2 },
@@ -223,6 +236,7 @@ export const TRIAGE_RULES = {
         { term: "reimbursement", weight: 4 },
         { term: "expense report", weight: 5 },
         { term: "stipend", weight: 4 },
+        { term: "travel reimbursement", weight: 5 },
       ],
     },
     {
@@ -243,7 +257,7 @@ export const TRIAGE_RULES = {
         { term: "office plant", weight: 6 },
         { term: "personal mail", weight: 6 },
         { term: "personal package", weight: 5 },
-        { term: "desk move", weight: 5 },
+        { term: "desk move", weight: 8 },
         { term: "offsite", weight: 4 },
         { term: "recognition award", weight: 5 },
         { term: "conference ticket", weight: 4 },
@@ -251,6 +265,7 @@ export const TRIAGE_RULES = {
         { term: "hoodie", weight: 4 },
         { term: "lost badge", weight: 5 },
         { term: "quiet workspace", weight: 4 },
+        { term: "workplace accommodation", weight: 6 },
       ],
     },
   ] as CategoryRule[],
@@ -343,6 +358,16 @@ function tokenize(text: string): string[] {
     .filter((token) => token.length > 0);
 }
 
+/** Pattern tokenizer keeps a trailing `*` so stems actually prefix-match. */
+function tokenizeTerm(term: string): string[] {
+  return term
+    .toLowerCase()
+    .replace(/[^a-z0-9*]+/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter((token) => token.length > 0);
+}
+
 function countOccurrences(tokens: string[], pattern: string[]): number {
   if (pattern.length === 0) return 0;
   let count = 0;
@@ -371,7 +396,7 @@ function scoreTerms(
   let score = 0;
   const matches: TriageMatch[] = [];
   for (const rule of terms) {
-    const pattern = tokenize(rule.term);
+    const pattern = tokenizeTerm(rule.term);
     const rawCount = countOccurrences(tokens, pattern);
     if (rawCount === 0) continue;
     const count = Math.min(rawCount, 2);
