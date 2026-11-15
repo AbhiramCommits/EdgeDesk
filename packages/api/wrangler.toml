@@ -1,6 +1,7 @@
 name = "edgedesk-api"
 main = "src/index.ts"
 compatibility_date = "2026-11-14"
+compatibility_flags = ["nodejs_compat"]
 
 # Local-only D1. `database_id = "local"` is intentional: EdgeDesk never talks to
 # a Cloudflare account. For a remote deploy, replace this with the real UUID.
