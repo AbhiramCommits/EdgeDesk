@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-15T05:22:47.498Z",
+    "generatedAt": "2026-11-15T05:29:34.804Z",
     "node": "v26.13.0",
     "runtime": "wrangler unstable_dev / Miniflare (local, no Cloudflare account)",
     "n": 500,
@@ -21,14 +21,14 @@
       "path": "/api/health",
       "n": 500,
       "concurrency": 10,
-      "p50": 9.56,
-      "p95": 34.46,
-      "p99": 137.81,
-      "max": 155.56,
-      "min": 2.72,
-      "mean": 15.12,
-      "throughputReqPerSec": 655.55,
-      "totalMs": 762.72
+      "p50": 12.45,
+      "p95": 32.44,
+      "p99": 114.81,
+      "max": 124.96,
+      "min": 4.9,
+      "mean": 16.26,
+      "throughputReqPerSec": 611.31,
+      "totalMs": 817.92
     },
     {
       "name": "create_request",
@@ -36,14 +36,14 @@
       "path": "/api/requests",
       "n": 500,
       "concurrency": 10,
-      "p50": 416.88,
-      "p95": 904.25,
-      "p99": 963.67,
-      "max": 976.49,
-      "min": 31.62,
-      "mean": 464.53,
-      "throughputReqPerSec": 21.43,
-      "totalMs": 23333.61
+      "p50": 383.27,
+      "p95": 1169.4,
+      "p99": 4110.17,
+      "max": 4116.42,
+      "min": 39.96,
+      "mean": 574.66,
+      "throughputReqPerSec": 17.21,
+      "totalMs": 29056.78
     },
     {
       "name": "list_requests",
@@ -51,14 +51,14 @@
       "path": "/api/requests",
       "n": 500,
       "concurrency": 10,
-      "p50": 41.23,
-      "p95": 112.43,
-      "p99": 295.34,
-      "max": 317.96,
-      "min": 7.42,
-      "mean": 53.49,
-      "throughputReqPerSec": 185.68,
-      "totalMs": 2692.87
+      "p50": 52.24,
+      "p95": 101.75,
+      "p99": 197.17,
+      "max": 198.43,
+      "min": 7.14,
+      "mean": 59.07,
+      "throughputReqPerSec": 168.63,
+      "totalMs": 2965.11
     },
     {
       "name": "get_request",
@@ -66,14 +66,14 @@
       "path": "/api/requests/:id",
       "n": 500,
       "concurrency": 10,
-      "p50": 60.07,
-      "p95": 129.66,
-      "p99": 203.47,
-      "max": 234.74,
-      "min": 9.35,
-      "mean": 69.39,
-      "throughputReqPerSec": 139.77,
-      "totalMs": 3577.25
+      "p50": 57.54,
+      "p95": 113.13,
+      "p99": 182.51,
+      "max": 263.71,
+      "min": 8.68,
+      "mean": 64.94,
+      "throughputReqPerSec": 153.16,
+      "totalMs": 3264.59
     }
   ],
   "agentRuns": {
@@ -82,11 +82,11 @@
       "finished": 500
     },
     "finishedWithDuration": 500,
-    "p50": 222,
-    "p95": 411,
-    "p99": 538,
-    "max": 538,
-    "min": 25,
-    "mean": 240.07
+    "p50": 206,
+    "p95": 459,
+    "p99": 507,
+    "max": 519,
+    "min": 18,
+    "mean": 223.16
   }
 }

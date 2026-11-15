@@ -2,6 +2,11 @@ import { defineWorkersConfig } from "@cloudflare/vitest-pool-workers/config";
 
 export default defineWorkersConfig({
   test: {
+    // All suites share one runtime and one D1 because Durable Object isolated
+    // storage is unreliable with the agent's storage writes. Run files
+    // sequentially so the explicit beforeEach reset cannot race.
+    fileParallelism: false,
+    maxWorkers: 1,
     poolOptions: {
       workers: {
         isolatedStorage: false,

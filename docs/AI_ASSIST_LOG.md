@@ -11,9 +11,9 @@ metric.
 | 2. Lifecycle API, auth, audit | 15 | 11 | 4 |
 | 3. Triage agent, tools, DO, SSE | 16 | 10 | 6 |
 | 4. React UI | 26 | 23 | 3 |
-| 5. Eval and benchmark | 9 | 5 | 4 |
+| 5. Eval and benchmark | 11 | 7 | 4 |
 | 6. Playwright, CI, docs | 9 | 7 | 2 |
-| **Total** | **95** | **70** | **25** |
+| **Total** | **97** | **72** | **25** |
 
 ## Step 1 — monorepo scaffold, Worker, D1
 
