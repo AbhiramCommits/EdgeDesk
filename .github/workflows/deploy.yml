@@ -1,0 +1,116 @@
+# Deploy EdgeDesk to Cloudflare.
+#
+# Required repository secrets (the deploy job is skipped when
+# CLOUDFLARE_API_TOKEN is empty, so forks and credential-less clones are safe):
+#
+#   CLOUDFLARE_API_TOKEN       Workers Scripts:Edit, D1:Edit, KV Storage:Edit, Pages:Edit
+#   CLOUDFLARE_ACCOUNT_ID      Cloudflare account id
+#   CLOUDFLARE_D1_DATABASE_ID  Remote D1 database UUID (replaces database_id="local")
+#   CLOUDFLARE_KV_NAMESPACE_ID Remote KV namespace id (replaces the local KV id)
+#   CLOUDFLARE_PAGES_PROJECT   Pages project name (defaults to edgedesk)
+#
+# The committed packages/api/wrangler.toml is local-only. This workflow writes
+# packages/api/wrangler.remote.toml with the real D1/KV ids, then applies D1
+# migrations and deploys the Worker. Pages serves the static Vite bundle and
+# proxies /api/* to the Worker (see packages/web/public/_redirects).
+#
+# Pages build settings if using Cloudflare's Git integration instead:
+#   Root directory: packages/web
+#   Build command:  pnpm build
+#   Output directory: dist
+
+name: deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Pages bundle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.8.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-dist
+          path: packages/web/dist
+          retention-days: 7
+
+  deploy:
+    name: D1 migrations, Worker, Pages
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      D1_DATABASE_ID: ${{ secrets.CLOUDFLARE_D1_DATABASE_ID }}
+      KV_NAMESPACE_ID: ${{ secrets.CLOUDFLARE_KV_NAMESPACE_ID }}
+      PAGES_PROJECT: ${{ secrets.CLOUDFLARE_PAGES_PROJECT || 'edgedesk' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.8.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Download Pages bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: packages/web/dist
+
+      - name: Materialise remote Wrangler config
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          source = Path("packages/api/wrangler.toml").read_text()
+          source = source.replace(
+              'database_id = "local"',
+              f'database_id = "{os.environ["D1_DATABASE_ID"]}"',
+          )
+          source = source.replace(
+              'id = "00000000000000000000000000000001"',
+              f'id = "{os.environ["KV_NAMESPACE_ID"]}"',
+          )
+          Path("packages/api/wrangler.remote.toml").write_text(source)
+          print("wrote packages/api/wrangler.remote.toml")
+          PY
+
+      - name: Apply D1 migrations (remote)
+        working-directory: packages/api
+        run: pnpm exec wrangler d1 migrations apply edgedesk --remote --config wrangler.remote.toml
+
+      - name: Deploy Worker
+        working-directory: packages/api
+        run: pnpm exec wrangler deploy --config wrangler.remote.toml
+
+      - name: Deploy Pages bundle
+        working-directory: packages/api
+        run: pnpm exec wrangler pages deploy ../web/dist --project-name "$PAGES_PROJECT"

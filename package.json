@@ -15,7 +15,7 @@
     "seed": "pnpm --filter api seed",
     "test": "pnpm --filter api test",
     "test:e2e": "playwright test",
-    "typecheck": "pnpm -r typecheck",
+    "typecheck": "pnpm -r typecheck && tsc -p tsconfig.e2e.json --noEmit",
     "lint": "eslint .",
     "build": "pnpm --filter web build",
     "eval": "pnpm --filter api eval",
