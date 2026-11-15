@@ -27,4 +27,5 @@ new_classes = ["AgentRunDO"]
 
 [vars]
 TRIAGE_MODE = "rules"
+AGENT_TRIGGER = "waitUntil"
 APP_VERSION = "0.1.0"

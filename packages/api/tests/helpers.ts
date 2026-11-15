@@ -27,7 +27,7 @@ export async function resetDatabase(): Promise<void> {
   await env.DB.exec(
     "DELETE FROM audit_events; DELETE FROM agent_steps; DELETE FROM agent_runs; DELETE FROM requests; DELETE FROM users;",
   );
-  const sessions = await env.SESSIONS.list({ prefix: "session:" });
+  const sessions = await env.SESSIONS.list();
   await Promise.all(sessions.keys.map((key) => env.SESSIONS.delete(key.name)));
   await createUser(env.DB, TEST_USERS.employee);
   await createUser(env.DB, TEST_USERS.ops);

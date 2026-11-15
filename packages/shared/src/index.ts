@@ -96,6 +96,7 @@ export const requestSchema = z.object({
   assigneeId: z.string().nullable(),
   assigneeName: z.string().nullable(),
   resolution: z.string().nullable(),
+  draftResolution: z.string().nullable(),
   dueAt: z.string().nullable(),
   slaBreached: z.boolean(),
   resolvedAt: z.string().nullable(),

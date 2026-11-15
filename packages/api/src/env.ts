@@ -5,6 +5,7 @@ export interface Env {
   SESSIONS: KVNamespace;
   AGENT_RUNS: DurableObjectNamespace;
   TRIAGE_MODE: string;
+  AGENT_TRIGGER?: string;
   APP_VERSION: string;
   GIT_COMMIT?: string;
 }

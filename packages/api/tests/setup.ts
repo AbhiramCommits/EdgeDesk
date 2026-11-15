@@ -24,6 +24,10 @@ async function apply(sql: string): Promise<void> {
 }
 
 beforeAll(async () => {
+  const existing = await env.DB.prepare(
+    "SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'users'",
+  ).first<{ name: string }>();
+  if (existing) return;
   await apply(initSql);
   await apply(slaSql);
 });

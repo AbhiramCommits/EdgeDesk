@@ -37,6 +37,7 @@ interface RequestRow {
   assignee_id: string | null;
   assignee_name: string | null;
   resolution: string | null;
+  draft_resolution: string | null;
   due_at: string | null;
   sla_breached: number;
   resolved_at: string | null;
@@ -114,6 +115,7 @@ function mapRequest(row: RequestRow): Request {
     assigneeId: row.assignee_id,
     assigneeName: row.assignee_name,
     resolution: row.resolution,
+    draftResolution: row.draft_resolution,
     dueAt: row.due_at,
     slaBreached: row.sla_breached === 1 || overdueNow,
     resolvedAt: row.resolved_at,
@@ -432,13 +434,14 @@ export async function applyTriageOutcome(
     priority: RequestPriority;
     assigneeId: string | null;
     dueAt: string | null;
+    draftResolution?: string | null;
     status?: RequestStatus;
   },
 ): Promise<Request | null> {
   await db
     .prepare(
       `UPDATE requests
-       SET category = ?, priority = ?, assignee_id = ?, due_at = ?,
+       SET category = ?, priority = ?, assignee_id = ?, due_at = ?, draft_resolution = ?,
            status = COALESCE(?, status), updated_at = ?
        WHERE id = ?`,
     )
@@ -447,6 +450,7 @@ export async function applyTriageOutcome(
       outcome.priority,
       outcome.assigneeId,
       outcome.dueAt,
+      outcome.draftResolution ?? null,
       outcome.status ?? null,
       nowIso(),
       id,
@@ -510,6 +514,17 @@ export async function getAgentRun(db: D1Database, id: string): Promise<AgentRun 
     .bind(id)
     .first<AgentRunRow>();
   return row ? mapAgentRun(row) : null;
+}
+
+export async function markAgentRunRunning(
+  db: D1Database,
+  id: string,
+  startedAt: string,
+): Promise<void> {
+  await db
+    .prepare("UPDATE agent_runs SET status = 'running', started_at = ? WHERE id = ?")
+    .bind(startedAt, id)
+    .run();
 }
 
 export async function getLatestAgentRun(

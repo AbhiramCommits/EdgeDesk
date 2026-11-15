@@ -8,7 +8,7 @@ import {
   type RequestPriority,
   type RequestStatus,
 } from "shared";
-import { kickoffAgentRun } from "../agent/runner";
+import { kickoffAgentRun, runAgent } from "../agent/runner";
 import { requireAuth, requireRole } from "../auth";
 import {
   assignRequest,
@@ -64,6 +64,13 @@ requestRoutes.post("/", async (c) => {
   });
 
   const runId = await kickoffAgentRun(request.id, c.env);
+  // Production default: keep the HTTP response fast and let the run finish in
+  // the background. Tests set AGENT_TRIGGER=manual and call runAgent() directly.
+  if (c.env.AGENT_TRIGGER === "sync") {
+    await runAgent(request.id, c.env, runId);
+  } else if (c.env.AGENT_TRIGGER !== "manual") {
+    c.executionCtx.waitUntil(runAgent(request.id, c.env, runId));
+  }
   return c.json({ request, runId }, 201);
 });
 
