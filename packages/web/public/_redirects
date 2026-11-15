@@ -1,0 +1,13 @@
+# Cloudflare Pages routing for EdgeDesk.
+#
+# Routing split:
+#   - Everything except /api/* is served from this static Vite bundle (SPA fallback).
+#   - /api/* is proxied to the edgedesk-api Worker, which is the only backend.
+#
+# The Worker URL below is a placeholder for a real deployment. Replace
+# <your-subdomain> with the account's workers.dev subdomain (or a custom route).
+# Locally, packages/web/vite.config.ts performs the same proxy to 127.0.0.1:8787,
+# so no _redirects rule is used during dev, preview, tests, or benchmarks.
+
+/* /index.html 200
+/api/* https://edgedesk-api.<your-subdomain>.workers.dev/api/:splat 200

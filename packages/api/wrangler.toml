@@ -1,0 +1,29 @@
+name = "edgedesk-api"
+main = "src/index.ts"
+compatibility_date = "2026-11-14"
+
+# Local-only D1. `database_id = "local"` is intentional: EdgeDesk never talks to
+# a Cloudflare account. For a remote deploy, replace this with the real UUID.
+[[d1_databases]]
+binding = "DB"
+database_name = "edgedesk"
+database_id = "local"
+migrations_dir = "src/db/migrations"
+
+# Session state: `session:<id>` -> { userId, role, email }, 12h TTL.
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "00000000000000000000000000000001"
+
+# In-flight agent run state for one request, keyed by request id.
+[[durable_objects.bindings]]
+name = "AGENT_RUNS"
+class_name = "AgentRunDO"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["AgentRunDO"]
+
+[vars]
+TRIAGE_MODE = "rules"
+APP_VERSION = "0.1.0"

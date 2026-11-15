@@ -1,0 +1,15 @@
+node_modules/
+dist/
+dist-worker/
+.wrangler/
+playwright-report/
+test-results/
+blob-report/
+.dev.vars
+.env
+.env.*
+!.env.example
+coverage/
+*.log
+.DS_Store
+.vite/
